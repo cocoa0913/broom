@@ -213,77 +213,80 @@
             <section id="evaluation" class="mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">사용자 평가 및 결과</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-500">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4">🎯 사용자 확보 및 특성</h3>
-                        <div class="space-y-4 text-slate-600">
-                            <div>
-                                <h4 class="font-semibold text-slate-800">확보 방법</h4>
-                                <p class="text-sm">학내 개발자 커뮤니티 및 '에브리타임' 홍보 게시판을 통해 베타 테스터 15명 모집</p>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-slate-800">사용자 특성</h4>
-                                <ul class="list-disc list-inside text-sm pl-2">
-                                    <li>다운로드 폴더가 10GB 이상인 대학생 (80%)</li>
-                                    <li>기존 클리너 앱(알약 등)에 피로감을 느끼는 사용자</li>
-                                    <li>Windows 10/11 환경 개발자 및 디자이너군</li>
-                                </ul>
-                            </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-500 mb-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                        <i data-lucide="users" class="w-6 h-6 mr-2 text-primary-600"></i>
+                        배포 대상 및 전반적 만족도
+                    </h3>
+                    <div class="flex flex-col lg:flex-row gap-8 items-center">
+                        <img src="피드백4.png" 
+                             alt="배포 대상 및 만족도 그래프"
+                             onerror="this.src='https://placehold.co/600x400/e2e8f0/334155?text=Feedback+4'"
+                             class="w-full lg:w-1/2 h-auto object-cover rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex-1 text-slate-600 leading-relaxed space-y-4">
+                            <p>
+                                총 11명의 사용자를 대상으로 진행한 설문 결과, 주 사용자층은 20대(90.9%)였으며 IT 전공자와 비전공자의 비율은 거의 비슷했습니다.
+                            </p>
+                            <p>
+                                앱의 전반적인 만족도는 5점 만점 기준 72.7%가 5점을 부여하여 매우 높게 나타났으며, 활용도 역시 높은 편으로 평가되었습니다.
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-blue-500">
-                        <h3 class="text-xl font-bold text-slate-900 mb-4">📊 만족도 조사 결과 (N=15)</h3>
-                        <div class="grid grid-cols-2 gap-4 text-center">
-                            <div class="p-4 bg-slate-50 rounded-lg">
-                                <p class="text-sm text-slate-500 mb-1">평균 만족도</p>
-                                <p class="text-3xl font-extrabold text-blue-600">4.7<span class="text-base text-slate-400">/5.0</span></p>
-                            </div>
-                            <div class="p-4 bg-slate-50 rounded-lg">
-                                <p class="text-sm text-slate-500 mb-1">재사용 의향</p>
-                                <p class="text-3xl font-extrabold text-blue-600">92<span class="text-base text-slate-400">%</span></p>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-400 mt-4 text-center">* 구글 폼을 이용한 10개 문항 정량 평가 진행 결과</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200">
-                    <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
-                        <h3 class="font-bold text-slate-800">설문 문항별 응답 결과 (Top 5)</h3>
+                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-blue-500 mb-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                        <i data-lucide="sliders" class="w-6 h-6 mr-2 text-blue-600"></i>
+                        사용 난이도 및 모드 활용 분석
+                    </h3>
+                    <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                         <img src="피드백1.png" 
+                             alt="프로그램 사용 난이도와 모드의 관계 그래프"
+                             onerror="this.src='https://placehold.co/600x400/e2e8f0/334155?text=Feedback+1'"
+                             class="w-full lg:w-1/2 h-auto object-cover rounded-lg border border-slate-200 shadow-sm">
+                        <div class="flex-1 text-slate-600 leading-relaxed space-y-4">
+                            <p>
+                                사용 난이도에 대해서는 '쉬운 편이다'(45.5%)라는 응답이 가장 많았으나, '어려운 편이다'(36.4%)라는 의견도 상당수 존재하여 개선의 필요성이 확인되었습니다.
+                            </p>
+                            <p>
+                                사용 모드는 '간단 모드'(40%)가 가장 많이 사용되었고, '제너럴 모드'와 '프로 모드'가 각각 30%로 균형 있게 사용되었습니다. 이는 사용자 수준별 모드 제공 전략이 유효했음을 시사합니다.
+                            </p>
+                        </div>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-slate-200">
-                            <thead class="bg-slate-50">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">평가 항목</th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">긍정 응답 (4~5점)</th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">주요 피드백</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-slate-200">
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">파일 정리 속도</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">95%</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"생각보다 훨씬 빨라서 놀랐음"</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">AI 분류 정확도</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">86%</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"가끔 모호한 파일이 있지만 대체로 정확함"</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">UI/UX 편의성</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">80%</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"심플 모드가 직관적이라 좋음"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                            <i data-lucide="thumbs-up" class="w-6 h-6 mr-2 text-green-600"></i>
+                            주요 긍정 피드백
+                        </h3>
+                        <img src="피드백2.png" 
+                             alt="가장 좋았던 기능 주관식 응답"
+                             onerror="this.src='https://placehold.co/400x300/e2e8f0/334155?text=Feedback+2'"
+                             class="w-full h-auto object-cover rounded-lg border border-slate-200 shadow-sm mb-4">
+                        <p class="text-slate-600 mb-4">가장 좋았던 기능으로는 '파일 정리 기능', '폴더 분석', 그리고 'AI 유사도 기반 파일 분류 기능' 등이 언급되었습니다.</p>
+                        <div class="bg-green-50 p-4 rounded-lg text-sm text-green-800 italic">
+                            "중복 파일, 오래된 파일이 잘 분류되어 정리하기 좋았습니다. 대용량 파일이 쉽게 분류되는 점이 편리했습니다."
+                        </div>
                     </div>
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-200">
-                        <a href="https://forms.gle/e6pochbKBgjBMbu8A" target="_blank" class="text-sm text-primary-600 hover:text-primary-800 font-medium flex items-center">
-                            설문 전체 결과 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                        </a>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 mr-2 text-yellow-600"></i>
+                            개선점 및 원인 분석
+                        </h3>
+                         <img src="피드백3.png" 
+                             alt="개선점 파악(만족도 하락 원인 및 앱이 어렵게 느껴지는 원인) 그래프"
+                             onerror="this.src='https://placehold.co/400x300/e2e8f0/334155?text=Feedback+3'"
+                             class="w-full h-auto object-cover rounded-lg border border-slate-200 shadow-sm mb-4">
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 mb-4">
+                            <li>**가장 큰 진입장벽:** 사용자가 직접 API 키를 입력해야 하는 방식이 어렵게 느껴진다는 의견이 지배적이었습니다 (100%).</li>
+                            <li>**기타 원인:** AI 사용 자체에 대한 익숙지 않음(80%), 디자인 불만족(60%) 등이 만족도 하락의 원인으로 지적되었습니다.</li>
+                        </ul>
+                        <div class="bg-yellow-50 p-4 rounded-lg text-sm text-yellow-800 italic">
+                             "ai 키를 입력하는 진입장벽이 너무 높았습니다. 그것만 개선하면 좋을 듯 합니다."
+                        </div>
                     </div>
                 </div>
             </section>
