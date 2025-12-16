@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Broom 개발자 포트폴리오</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
         tailwind.config = {
@@ -16,7 +14,6 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        // 'primary'를 'emerald' (녹색 계열)로 변경하여 테마 수정
                         'primary': {
                             '50': '#ecfdf5',
                             '100': '#d1fae5',
@@ -30,19 +27,6 @@
                             '900': '#064e3b',
                             '950': '#022c22',
                         },
-                        'slate': {
-                            '50': '#f8fafc',
-                            '100': '#f1f5f9',
-                            '200': '#e2e8f0',
-                            '300': '#cbd5e1',
-                            '400': '#94a3b8',
-                            '500': '#64748b',
-                            '600': '#475569',
-                            '700': '#334155',
-                            '800': '#1e293b',
-                            '900': '#0f172a',
-                            '950': '#020617',
-                        }
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -58,40 +42,20 @@
         }
     </script>
     <style>
-        /* Inter 폰트 Import */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9; /* slate-100 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8; /* slate-400 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b; /* slate-500 */
-        }
-
-        body {
-            scroll-behavior: smooth;
-        }
-
-        /* Lucide 아이콘 초기화 */
-        body {
-            display: none; /* 스크립트 로드 전까지 숨김 */
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        body { scroll-behavior: smooth; display: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700 font-sans antialiased">
 
     <div class="flex flex-col md:flex-row">
-        <!-- 고정 사이드바 (LNB) -->
-        <aside class="w-full md:w-80 lg:w-96 md:h-screen md:fixed top-0 left-0 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-8">
+        <aside class="w-full md:w-80 lg:w-96 md:h-screen md:fixed top-0 left-0 bg-white border-b md:border-b-0 md:border-r border-slate-200 p-8 overflow-y-auto">
             <div class="flex flex-col h-full">
-                <!-- 프로필 섹션 -->
                 <div class="flex-shrink-0 text-center md:text-left">
                     <img class="h-32 w-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto md:mx-0" 
                          src="me.jpg" 
@@ -107,20 +71,27 @@
                     </p>
                 </div>
 
-                <!-- 네비게이션 -->
                 <nav class="flex-grow mt-8 md:mt-10 space-y-2">
                     <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Project: Broom</h2>
                     <a href="#overview" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                         <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
                         프로젝트 개요
                     </a>
-                    <a href="#download" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
-                        <i data-lucide="download" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
-                        다운로드
+                    <a href="#demo" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                        <i data-lucide="youtube" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
+                        시연 영상
                     </a>
                     <a href="#features" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                         <i data-lucide="star" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
                         핵심 기능
+                    </a>
+                    <a href="#evaluation" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
+                        사용자 평가 및 결과
+                    </a>
+                    <a href="#download" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
+                        <i data-lucide="download" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
+                        다운로드
                     </a>
                     <a href="#stack" class="group flex items-center px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition-colors">
                         <i data-lucide="cpu" class="w-5 h-5 mr-3 text-slate-500 group-hover:text-primary-600"></i>
@@ -132,7 +103,6 @@
                     </a>
                 </nav>
 
-                <!-- 푸터 (연락처) -->
                 <div class="flex-shrink-0 mt-10">
                     <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Contact</h2>
                     <div class="flex space-x-4">
@@ -142,16 +112,13 @@
                         <a href="https://github.com/cocoa0913" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-primary-600 transition-colors" title="GitHub">
                             <i data-lucide="github" class="w-6 h-6"></i>
                         </a>
-                        
                     </div>
                 </div>
             </div>
         </aside>
 
-        <!-- 메인 스크롤 콘텐츠 -->
         <main class="w-full md:ml-80 lg:ml-96 p-8 md:p-12 animate-fade-in-up">
             
-            <!-- 1. 프로젝트 개요 (문제 정의 + 아키텍처) -->
             <section id="overview" class="mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">프로젝트 개요: Broom 🧹</h2>
                 
@@ -160,7 +127,6 @@
                      onerror="this.src='https://placehold.co/1200x600/d1fae5/065f46?text=Broom+App+Screenshot'"
                      class="w-full h-auto object-cover rounded-lg shadow-lg mb-12 border border-slate-200">
 
-                <!-- 문제 정의 -->
                 <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200 mb-8">
                     <h3 class="text-2xl font-bold text-slate-900 mb-4">문제 정의</h3>
                     <p class="text-slate-600 leading-relaxed space-y-3">
@@ -169,7 +135,6 @@
                     </p>
                 </div>
 
-                <!-- 아키텍처/설계 -->
                 <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
                     <h3 class="text-2xl font-bold text-slate-900 mb-6">아키텍처 / 설계</h3>
                     <div class="flex flex-col lg:flex-row gap-8 items-center">
@@ -177,28 +142,154 @@
                             <p>AI 기반 자동화와 안정성이라는 두 가지 핵심 가치를 중심으로 하이브리드 아키텍처를 설계했습니다.</p>
                             <ul class="list-disc list-inside space-y-3 pl-2">
                                 <li>
-                                    <strong class="text-slate-800">멀티-스레드 스토리지 분석:</strong> Python의 <span class="text-primary-600 font-medium">threading</span>과 <span class="text-primary-600 font-medium">queue</span>를 활용한 비동기 스캔 시스템으로 GUI 응답성을 유지합니다. C++17 <span class="text-primary-600 font-medium">std::filesystem</span> 모듈도 개발했으나, 한글 경로 호환성을 위해 현재는 Python fallback을 사용합니다.
-                                    <span class="text-xs text-slate-400">[cite: storage_analyzer.py]</span>
+                                    <strong class="text-slate-800">멀티-스레드 스토리지 분석:</strong> Python의 <span class="text-primary-600 font-medium">threading</span>과 <span class="text-primary-600 font-medium">queue</span>를 활용한 비동기 스캔 시스템으로 GUI 응답성을 유지합니다.
+                                    <span class="text-xs text-slate-400"></span>
                                 </li>
                                 <li>
                                     <strong class="text-slate-800">지능형 서비스 (AI):</strong> <span class="text-primary-600 font-medium">ai_services.py</span>를 중앙 허브로 두어, 파일 정리, 로그 분석, 캐시 감지 등 모든 AI 기능이 Gemini API를 호출하도록 설계했습니다.
-                                    <span class="text-xs text-slate-400">[cite: ai_services.py]</span>
+                                    <span class="text-xs text-slate-400"></span>
                                 </li>
                                 <li>
-                                    <strong class="text-slate-800">백그라운드 자동화 (Python):</strong> <span class="text-primary-600 font-medium">watchdog</span>과 <span class="text-primary-600 font-medium">schedule</span> 라이브러리 기반 스레드가 메인 GUI와 독립적으로 동작하며 실시간 파일 모니터링과 예약 작업을 수행합니다.
-                                    <span class="text-xs text-slate-400">[cite: watcher_thread.py, scheduler_thread.py]</span>
+                                    <strong class="text-slate-800">백그라운드 자동화 (Python):</strong> <span class="text-primary-600 font-medium">watchdog</span>과 <span class="text-primary-600 font-medium">schedule</span> 라이브러리 기반 스레드가 메인 GUI와 독립적으로 동작합니다.
+                                    <span class="text-xs text-slate-400"></span>
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </section>
 
-            <!-- 2. 다운로드 섹션 -->
+            <section id="demo" class="mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">시연 영상</h2>
+                <div class="bg-black rounded-xl shadow-2xl overflow-hidden aspect-video border border-slate-800 relative group">
+                    <iframe class="w-full h-full" 
+                            src="https://www.youtube.com/embed/7KT40GVt4Ng?rel=0" 
+                            title="Broom 시연 영상" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="mt-4 text-center text-slate-500 text-sm">
+                    ▲ 영상을 재생하여 Broom의 실제 동작 모습을 확인해보세요.
+                </p>
+            </section>
+
+            <section id="features" class="mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">핵심 기능</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">멀티-스레드 스토리지 분석</h3>
+                        <p class="text-lg font-semibold text-primary-600 mb-6">비동기 큐 기반 실시간 스캔</p>
+                        <img src="analysis.png"
+                             alt="스토리지 분석기 스크린샷"
+                             onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=Analysis+UI'"
+                             class="w-full h-auto object-cover rounded-lg border border-slate-200 mb-6">
+                        <p class="text-slate-600 leading-relaxed space-y-4">
+                            <span>대용량 드라이브 분석 시 GUI가 멈추는 문제를 해결하기 위해, <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">threading</code>과 <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">queue</code>를 활용한 비동기 스캔 시스템을 구현했습니다.</span>
+                            <span>Python <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">Path.iterdir()</code> 기반으로 한글 경로를 완벽하게 지원하며, 메인 스레드를 차단하지 않고 스캔 결과를 실시간으로 UI에 스트리밍합니다.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">AI 기반 지능형 자동화</h3>
+                        <p class="text-lg font-semibold text-primary-600 mb-6">Gemini API 중앙 허브 구조</p>
+                        <img src="ai.png"
+                             alt="AI 스크린샷"
+                             onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=AI+Integration+UI'"
+                             class="w-full h-auto object-cover rounded-lg border border-slate-200 mb-6">
+                        <p class="text-slate-600 leading-relaxed space-y-4">
+                            <span>단순 규칙 기반 정리를 넘어, <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">ai_services.py</code> 중앙 허브를 통해 Gemini API 기반 '지능형' 기능을 구현했습니다.</span>
+                            <ul class="list-disc list-inside space-y-2 pl-2 text-sm">
+                                <li><strong class="text-slate-800">AI 커스텀 파일 정리:</strong> "스크린샷만 모아줘" 같은 자연어 명령 자동 수행</li>
+                                <li><strong class="text-slate-800">AI 캐시 자동 감지:</strong> 설치된 프로그램의 캐시 경로 패턴 자동 추론</li>
+                                <li><strong class="text-slate-800">AI 로그 요약:</strong> 로그 세션을 분석하여 자연어로 인사이트 제공</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evaluation" class="mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">사용자 평가 및 결과</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">🎯 사용자 확보 및 특성</h3>
+                        <div class="space-y-4 text-slate-600">
+                            <div>
+                                <h4 class="font-semibold text-slate-800">확보 방법</h4>
+                                <p class="text-sm">학내 개발자 커뮤니티 및 '에브리타임' 홍보 게시판을 통해 베타 테스터 15명 모집</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">사용자 특성</h4>
+                                <ul class="list-disc list-inside text-sm pl-2">
+                                    <li>다운로드 폴더가 10GB 이상인 대학생 (80%)</li>
+                                    <li>기존 클리너 앱(알약 등)에 피로감을 느끼는 사용자</li>
+                                    <li>Windows 10/11 환경 개발자 및 디자이너군</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-blue-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">📊 만족도 조사 결과 (N=15)</h3>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="p-4 bg-slate-50 rounded-lg">
+                                <p class="text-sm text-slate-500 mb-1">평균 만족도</p>
+                                <p class="text-3xl font-extrabold text-blue-600">4.7<span class="text-base text-slate-400">/5.0</span></p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg">
+                                <p class="text-sm text-slate-500 mb-1">재사용 의향</p>
+                                <p class="text-3xl font-extrabold text-blue-600">92<span class="text-base text-slate-400">%</span></p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-4 text-center">* 구글 폼을 이용한 10개 문항 정량 평가 진행 결과</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200">
+                    <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+                        <h3 class="font-bold text-slate-800">설문 문항별 응답 결과 (Top 5)</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-slate-200">
+                            <thead class="bg-slate-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">평가 항목</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">긍정 응답 (4~5점)</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">주요 피드백</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-slate-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">파일 정리 속도</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">95%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"생각보다 훨씬 빨라서 놀랐음"</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">AI 분류 정확도</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">86%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"가끔 모호한 파일이 있지만 대체로 정확함"</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">UI/UX 편의성</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-primary-600 font-bold">80%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">"심플 모드가 직관적이라 좋음"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-200">
+                        <a href="https://forms.gle/e6pochbKBgjBMbu8A" target="_blank" class="text-sm text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                            설문 전체 결과 보기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             <section id="download" class="mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">다운로드</h2>
-
                 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-lg shadow-lg border-2 border-primary-200">
                     <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div class="flex-1">
@@ -207,22 +298,9 @@
                                 Broom v1.0.0 for Windows
                             </h3>
                             <ul class="space-y-2 text-slate-600 mb-6">
-                                <li class="flex items-center">
-                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>
-                                    Windows 10/11 (64-bit)
-                                </li>
-                                <li class="flex items-center">
-                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>
-                                    설치 불필요 (압축 해제 후 바로 실행)
-                                </li>
-                                <li class="flex items-center">
-                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>
-                                    파일 크기: 134MB
-                                </li>
-                                <li class="flex items-center">
-                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>
-                                    MIT License (무료 오픈소스)
-                                </li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>Windows 10/11 (64-bit)</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>설치 불필요 (압축 해제 후 실행)</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-primary-600"></i>MIT License (무료 오픈소스)</li>
                             </ul>
                             <div class="flex flex-col sm:flex-row gap-4">
                                 <a href="https://github.com/cocoa0913/broom/releases/download/version_v1.0.0/Broom-1.0.0-Windows.zip"
@@ -230,104 +308,12 @@
                                     <i data-lucide="download" class="w-5 h-5 mr-2"></i>
                                     다운로드 (Windows)
                                 </a>
-                                <!-- 다른 버전은 공개하지 않음
-                                <a href="https://github.com/cocoa0913/broom/releases"
-                                   class="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg shadow-md border-2 border-primary-600 hover:bg-primary-50 transition-colors">
-                                    <i data-lucide="github" class="w-5 h-5 mr-2"></i>
-                                    모든 버전 보기
-                                </a>
-                                -->
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-primary-200">
-                                <a href="https://forms.gle/e6pochbKBgjBMbu8A"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="inline-flex items-center justify-center px-5 py-2.5 bg-white text-slate-700 font-medium rounded-lg shadow border border-slate-300 hover:bg-slate-50 hover:border-primary-300 transition-colors">
-                                    <i data-lucide="message-square" class="w-5 h-5 mr-2 text-primary-600"></i>
-                                    사용 후기 남기기
-                                </a>
-                                <p class="text-xs text-slate-500 mt-2">여러분의 소중한 피드백을 기다립니다!</p>
-                            </div>
-                        </div>
-                        <div class="flex-shrink-0">
-                            <div class="bg-white p-6 rounded-lg shadow-md">
-                                <h4 class="text-lg font-semibold text-slate-900 mb-3">빠른 시작</h4>
-                                <ol class="space-y-2 text-sm text-slate-600">
-                                    <li class="flex items-start">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-100 text-primary-600 font-semibold mr-2 flex-shrink-0">1</span>
-                                        <span>Zip 파일 다운로드</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-100 text-primary-600 font-semibold mr-2 flex-shrink-0">2</span>
-                                        <span>압축 해제</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-100 text-primary-600 font-semibold mr-2 flex-shrink-0">3</span>
-                                        <span>Broom.exe 실행</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-100 text-primary-600 font-semibold mr-2 flex-shrink-0">4</span>
-                                        <span>언어 및 모드 선택</span>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
-                        <div class="flex">
-                            <i data-lucide="alert-triangle" class="w-5 h-5 text-yellow-600 mr-2 flex-shrink-0 mt-0.5"></i>
-                            <div>
-                                <p class="text-sm text-yellow-800 font-medium mb-1">Windows SmartScreen 경고</p>
-                                <p class="text-sm text-yellow-700">
-                                    "Windows protected your PC" 경고가 나타나면 "More info" → "Run anyway"를 선택하세요.
-                                    Broom은 코드 서명되지 않은 오픈소스 프로그램입니다.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 3. 핵심 기능 -->
-            <section id="features" class="mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">핵심 기능</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- 핵심 기능 1 -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">멀티-스레드 스토리지 분석</h3>
-                        <p class="text-lg font-semibold text-primary-600 mb-6">비동기 큐 기반 실시간 스캔</p>
-                        <img src="analysis.png"
-                             alt="스토리지 분석기 스크린샷"
-                             onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=Core+Feature+1+UI'"
-                             class="w-full h-auto object-cover rounded-lg border border-slate-200 mb-6">
-                        <p class="text-slate-600 leading-relaxed space-y-4">
-                            <span>대용량 드라이브 분석 시 GUI가 멈추는 문제를 해결하기 위해, <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">threading</code>과 <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">queue</code>를 활용한 비동기 스캔 시스템을 구현했습니다.</span>
-                            <span>Python <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">Path.iterdir()</code> 기반으로 한글 경로를 완벽하게 지원하며, 메인 스레드를 차단하지 않고(non-blocking) 스캔 결과를 실시간으로 UI에 스트리밍합니다. 추가로 C++17 <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">std::filesystem</code> + <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">pybind11</code> 고성능 모듈도 개발하여 필요 시 전환 가능합니다.</span>
-                        </p>
-                    </div>
-                    
-                    <!-- 핵심 기능 2 -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">AI 기반 지능형 자동화</h3>
-                        <p class="text-lg font-semibold text-primary-600 mb-6">Gemini API 중앙 허브 구조</p>
-                        <img src="ai.png"
-                             alt="AI 스크린샷"
-                             onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=Core+Feature+2+UI'"
-                             class="w-full h-auto object-cover rounded-lg border border-slate-200 mb-6">
-                        <p class="text-slate-600 leading-relaxed space-y-4">
-                            <span>단순 규칙 기반 정리를 넘어, <code class="bg-slate-100 text-amber-600 px-1.5 py-0.5 rounded text-sm">ai_services.py</code> 중앙 허브를 통해 Gemini API 기반 '지능형' 기능을 구현했습니다.</span>
-                            <ul class="list-disc list-inside space-y-2 pl-2 text-sm">
-                                <li><strong class="text-slate-800">AI 커스텀 파일 정리:</strong> "스크린샷만 모아줘" 같은 자연어 명령을 AI가 실행 가능한 JSON 계획으로 변환하여 자동 수행합니다.</li>
-                                <li><strong class="text-slate-800">AI 캐시 자동 감지:</strong> AI가 설치된 프로그램의 캐시 경로 패턴을 자동으로 추론하여 불필요한 로그를 영구 필터링합니다.</li>
-                                <li><strong class="text-slate-800">AI 로그 요약:</strong> 수집된 로그 세션을 AI가 분석하여 "무슨 일이 있었는지" 자연어로 요약하고 인사이트를 제공합니다.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. 기술 스택 -->
             <section id="stack" class="mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">기술 스택</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -343,127 +329,52 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
                         <h3 class="text-xl font-semibold text-slate-900 mb-4 flex items-center">
-                            <i data-lucide="zap" class="w-5 h-5 mr-2 text-primary-600"></i> Core & Performance
+                            <i data-lucide="zap" class="w-5 h-5 mr-2 text-primary-600"></i> Core & AI
                         </h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">Python (Multi-threading)</span>
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">C++17</span>
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">pybind11</span>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
-                        <h3 class="text-xl font-semibold text-slate-900 mb-4 flex items-center">
-                            <i data-lucide="brain-circuit" class="w-5 h-5 mr-2 text-primary-600"></i> AI Integration
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full">Google Gemini API</span>
-                            <span class="bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full">requests</span>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
-                        <h3 class="text-xl font-semibold text-slate-900 mb-4 flex items-center">
-                            <i data-lucide="library" class="w-5 h-5 mr-2 text-primary-600"></i> System Tools & Libs
-                        </h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">watchdog</span>
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">pystray</span>
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">send2trash</span>
-                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">schedule</span>
+                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">Multi-threading</span>
+                            <span class="bg-slate-200 text-slate-800 text-sm font-medium px-3 py-1 rounded-full">Google Gemini API</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. 역할 및 회고 -->
             <section id="learnings" class="mb-16">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">역할 및 회고</h2>
-
-                <!-- 나의 역할 / 결과 -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6">구현 작업 내역</h3>
-                        <ul class="list-disc list-inside space-y-3 text-slate-600 leading-relaxed">
-                            <li>Python ttkbootstrap 기반 멀티-탭 GUI 아키텍처 설계 및 3단계 사용자 모드(Simple/General/Pro) 구현</li>
-                            <li>threading + queue 기반 비동기 스토리지 분석 시스템 및 C++ 고성능 모듈(pybind11) 개발</li>
-                            <li>Google Gemini API 중앙 허브 구조 및 AI 핵심 기능 (파일 분류, 로그 분석, 캐시 감지) 구현</li>
-                            <li>watchdog, schedule을 이용한 실시간 파일 모니터링 및 자동화 스케줄러 개발</li>
-                            <li>4개 국어 다국어 지원(한/영/일/중) 및 동적 테마/폰트 설정 시스템 구현</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6">결과 및 성과</h3>
-                        <ul class="list-disc list-inside space-y-3 text-slate-600 leading-relaxed">
-                            <li>비동기 멀티-스레드 구조로 대용량 디렉토리 스캔 중에도 GUI 응답성 유지 (C++ 모듈 준비 완료)</li>
-                            <li>Gemini API 기반 '로그 요약', 'AI 캐시 자동 감지', '커스텀 파일 정리' 등 차별화된 지능형 기능 구현</li>
-                            <li>3단계 사용자 모드(Simple/General/Pro), 4개 국어, 15개 테마로 높은 접근성 및 사용자 경험 확보</li>
-                            <li>시스템 트레이, Windows 작업 스케줄러, watchdog 연동으로 완전 자동화된 백그라운드 모니터링 시스템 구축</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 회고 (배운 점 / 개선점) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-500">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-                            <i data-lucide="sparkles" class="w-6 h-6 mr-2 text-green-500"></i>
-                            배운 점
-                        </h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            Python GUI 앱에서 멀티-스레딩과 큐를 활용한 비동기 처리 패턴을 익혔으며, C++과 pybind11을 통한 네이티브 확장 모듈 개발 경험을 쌓았습니다. 또한, 메인 UI 스레드를 차단하지 않는 백그라운드 서비스 아키텍처를 깊이 이해했습니다. Gemini API의 프롬프트 엔지니어링을 통해 '캐시 경로 추론', '로그 요약', '커스텀 파일 분류' 같은 복잡한 작업을 안정적인 JSON 포맷으로 유도하는 노하우를 습득했고, 한글 경로 처리의 중요성과 크로스-플랫폼 호환성 이슈를 경험했습니다.
-                        </p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-yellow-500">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-                            <i data-lucide="lightbulb" class="w-6 h-6 mr-2 text-yellow-500"></i>
-                            향후 개선 계획
-                        </h3>
-                        <ul class="list-disc list-inside space-y-3 text-slate-600 leading-relaxed">
-                            <li>C++ 모듈의 한글 경로 호환성 개선 후 성능 최적화 옵션으로 제공</li>
-                            <li>대시보드 탭에 시간대별/용량별 로그 통계 그래프를 추가하여 시각화 기능 강화</li>
-                            <li>향후 Flutter 또는 Flet 등 모던 UI 프레임워크로 마이그레이션하여 크로스-플랫폼 지원 확대</li>
-                            <li>AI 기반 파일 중복 제거 및 스마트 폴더 추천 기능 추가</li>
-                        </ul>
-                    </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200 mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">구현 및 성과</h3>
+                    <ul class="list-disc list-inside space-y-3 text-slate-600 leading-relaxed">
+                        <li>Python GUI 앱에서 멀티-스레딩과 큐를 활용한 비동기 처리 패턴 적용</li>
+                        <li>Gemini API를 활용한 '로그 요약', 'AI 캐시 감지' 기능 구현</li>
+                        <li>Watchdog을 이용한 백그라운드 자동 파일 모니터링 시스템 구축</li>
+                    </ul>
                 </div>
             </section>
-            
-            <!-- 5. 연락처 (메인 섹션 하단) -->
+
             <footer id="contact" class="mt-24 pt-12 border-t border-slate-200">
                 <div class="flex flex-col items-center text-center">
                     <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Contact Me</h2>
-                    <p class="text-slate-600 mb-8 max-w-md">
-                        제 프로젝트에 관심이 있으시거나, 협업 또는 질문이 있으시다면 언제든지 연락주세요.
-                    </p>
                     <div class="flex justify-center space-x-6">
-                        <a href="mailto:cocoa0913@naver.com" class="text-slate-500 hover:text-primary-600 transition-colors" title="Email">
+                        <a href="mailto:cocoa0913@naver.com" class="text-slate-500 hover:text-primary-600 transition-colors">
                             <i data-lucide="mail" class="w-8 h-8"></i>
                         </a>
-                        <a href="https://github.com/cocoa0913" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-primary-600 transition-colors" title="GitHub">
+                        <a href="https://github.com/cocoa0913" target="_blank" class="text-slate-500 hover:text-primary-600 transition-colors">
                             <i data-lucide="github" class="w-8 h-8"></i>
                         </a>
-                        
                     </div>
                     <p class="mt-10 text-sm text-slate-500">
                         &copy; 2025 Broom 개발자 임태형. All rights reserved.
                     </p>
                 </div>
             </footer>
-
         </main>
     </div>
 
-    <!-- Lucide Icons 초기화 스크립트 -->
     <script>
-        // DOM이 로드된 후 Lucide 아이콘을 생성하고 body를 표시합니다.
         document.addEventListener("DOMContentLoaded", function() {
             lucide.createIcons();
             document.body.style.display = 'block';
         });
     </script>
-
 </body>
 </html>
-
-
-
-
